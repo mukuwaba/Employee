@@ -1,0 +1,79 @@
+//
+
+public class Employee {  //creates Employee Object
+
+    //instance variables
+    private String firstName;
+    private String lastName;
+    private double monthlySalary;
+
+    //Constructor --> initalizes the instance variables
+    public Employee(String firstName, String lastName, double monthlySalary) {
+    //creates employee object
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+    //Validate that the monthly salary is positive
+        if (monthlySalary > 0) {
+        this.monthlySalary = monthlySalary;
+        }//END: if
+
+    //What if the monthly salary is not positive?
+        else {
+        this.monthlySalary = 0;
+        System.out.println("Invalid entry. Monthly salary is $0.00");
+        }//END: else
+    }//END: main Employee
+
+    //Set and Get Method
+    //Set method for first name
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    //Get method for firstName
+    public String getFirstName(){
+        return firstName;
+    } //
+    //Set Method for lastName
+    public void setLastName(String lastName){
+        this.lastName = lastName;
+    }
+    //Get Method for lastName
+    public String getLastName(){
+        return lastName;
+    }
+//Set Method for monthlySalary
+    public void setMonthlySalary(double monthlySalary){
+        if (monthlySalary > 0){
+            this.monthlySalary = monthlySalary;
+        }//END: Set
+        else{
+            this.monthlySalary = 0;
+            System.out.println("Invalid entry. Salary is $0.00");
+        }//END: else
+    }//END: main setMonthlySalary
+
+    //get method for monthly salary
+    public double getMonthlySalary(){
+        return monthlySalary;
+    }
+
+    //Calculate and return yearly salary
+    public double getYearlySalary(){
+        return monthlySalary * 12;
+    }
+
+    //Apply ten percent raise
+    public void applyRaise(){
+        monthlySalary *= 1.10;
+    }
+    // *= used to multiply the value of a variable by
+    // another value and assign the result back to the variable.
+    //variable *= value; is equal to variable = variable * value;
+    }//END:main
+
+
+
+
+# Employee
