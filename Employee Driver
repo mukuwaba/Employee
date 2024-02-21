@@ -1,0 +1,20 @@
+public class EmployeeDriver {
+    public static void main(String[] args) {
+        // Create two Employee objects
+        Employee employee1 = new Employee("John", "Doe", 5000.0);
+        Employee employee2 = new Employee("Jane", "Smith", 6000.0);
+
+        // Display each employee's yearly salary
+        System.out.println("Employee 1 Yearly Salary: " + employee1.getYearlySalary());
+        System.out.println("Employee 2 Yearly Salary: " + employee2.getYearlySalary());
+
+        // Give each employee a 10% raise
+        employee1.applyRaise();
+        employee2.applyRaise();
+
+        // Display each employee's yearly salary after the raise
+        System.out.println("\nAfter 10% Raise:");
+        System.out.println("Employee 1 Yearly Salary: " + employee1.getYearlySalary());
+        System.out.println("Employee 2 Yearly Salary: " + employee2.getYearlySalary());
+    }
+}
