@@ -1,5 +1,3 @@
-//
-
 public class Employee {  //creates Employee Object
 
     //instance variables
@@ -90,8 +88,3 @@ public class Employee {  //creates Employee Object
     // another value and assign the result back to the variable.
     //variable *= value; is equal to variable = variable * value;
 }//END:class
-
-
-
-
-
