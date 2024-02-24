@@ -6,23 +6,25 @@ public class Employee {  //creates Employee Object
     private String firstName;
     private String lastName;
     private double monthlySalary;
+    private double yearlySalary;
 
     //Constructor --> initalizes the instance variables
     public Employee(String firstName, String lastName, double monthlySalary) {
-    //creates employee object
+        //creates employee object
         this.firstName = firstName;
         this.lastName = lastName;
 
-    //Validate that the monthly salary is positive
+        //Validate that the monthly salary is positive
         if (monthlySalary > 0) {
         this.monthlySalary = monthlySalary;
         }//END: if
 
-    //What if the monthly salary is not positive?
+        //What if the monthly salary is not positive?
         else {
-        this.monthlySalary = 0;
-        System.out.println("Invalid entry. Monthly salary is $0.00");
-        }//END: else
+            this.monthlySalary = 0;
+            System.out.println("Invalid entry. Monthly salary is $0.00");
+            }//END: else
+        this.yearlySalary = yearlySalary;
     }//END: main Employee
 
     //Set and Get Method
@@ -33,47 +35,63 @@ public class Employee {  //creates Employee Object
     }
     //Get method for firstName
     public String getFirstName(){
+
         return firstName;
     } //
     //Set Method for lastName
     public void setLastName(String lastName){
+
         this.lastName = lastName;
     }
     //Get Method for lastName
     public String getLastName(){
+
         return lastName;
     }
 //Set Method for monthlySalary
-    public void setMonthlySalary(double monthlySalary){
-        if (monthlySalary > 0){
+    public void setMonthlySalary(double monthlySalary) {
+        if (monthlySalary > 0) {
             this.monthlySalary = monthlySalary;
         }//END: Set
-        else{
+        else {
             this.monthlySalary = 0;
             System.out.println("Invalid entry. Salary is $0.00");
         }//END: else
-    }//END: main setMonthlySalary
+    }
+
+    public void setYearlySalary(double yearlySalary){
+            if (yearlySalary > 0){
+                this.yearlySalary = yearlySalary;
+            }
+            else {
+                this.yearlySalary = 0;
+                System.out.println("Invalid entry. Annual Salary is $0.00");
+            }
+        }
 
     //get method for monthly salary
     public double getMonthlySalary(){
+
         return monthlySalary;
     }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
     //Calculate and return yearly salary
     public double getYearlySalary(){
+
         return monthlySalary * 12;
     }
 
     //Apply ten percent raise
     public void applyRaise(){
+
         monthlySalary *= 1.10;
     }
     // *= used to multiply the value of a variable by
     // another value and assign the result back to the variable.
     //variable *= value; is equal to variable = variable * value;
-    }//END:main
+}//END:class
 
 
 
 
-# Employee
+
