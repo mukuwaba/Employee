@@ -2,11 +2,11 @@ public class EmployeeDriver {
     public static void main(String[] args) {
         // Create two Employee objects
         Employee employee1 = new Employee("Mukuwa", "Baffoe", 5000.0);
-        Employee employee2 = new Employee("Robert", "Talbott", 6000.0);
+        Employee employee2 = new Employee("Robert", "Talbott", 10000.0);
 
         // Display each employee's yearly salary
         System.out.println("Mukuwa's Yearly Salary: " + employee1.getYearlySalary());
-        System.out.println("Dr.Talbott's Yearly Salary: " + employee2.getYearlySalary());
+        System.out.println("Dr.Talbott's Yearly Salary: "+ employee2.getYearlySalary());
 
         // Give each employee a 10% raise
         employee1.applyRaise();
